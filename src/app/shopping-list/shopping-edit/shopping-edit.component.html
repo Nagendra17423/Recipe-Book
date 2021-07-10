@@ -1,0 +1,26 @@
+<!-- <p>shopping-edit works!</p> -->
+<div class="row">
+    <div class="col-sm12">
+        <form>
+            <div class="row">
+            <div class="col-sm-5 form-group">
+                <label for="name" class="form-control-label">Name:</label>
+                <input type="text" class="form-control" #inpName>
+
+            </div>
+            <div class="col-sm-2 form-group">
+                <label for="amount" class="form-control-label">Amount</label>
+                <input type="number" class="form-control" #inpAmt>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 btn-group" >
+                <button class="btn btn-success" type="button"
+                (click)="addIngredient()">Add</button>
+                <button class="btn btn-danger" type="button">Delete</button>
+                <button class="btn btn-primary" type="reset">Reset</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

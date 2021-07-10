@@ -1,0 +1,17 @@
+<!-- <p>recipes-item works!</p> -->
+<!-- <a class="list-group-item clearfix
+    " (click)='selectedRecipe()'> -->
+    <a class="list-group-item clearfix" 
+    [routerLink]="[index]"
+    routerLinkActive="active">
+    <!-- <a href="#" class="list-group-item clearfix" > -->
+    <div class="float-left">
+        <!-- <h4 class="list-group-item-heading">Name:{{recipes[0].name}}</h4>
+         -->
+        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+        <p class="listgroup-ite-text">{{recipe.description}}</p>
+    </div>
+    <span class="float-right">
+        <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-responsive" style="max-width:100px;">
+    </span>
+</a>

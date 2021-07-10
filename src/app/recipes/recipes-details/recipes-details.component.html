@@ -1,0 +1,48 @@
+<!-- <p>recipes-details works!</p>
+ -->
+<div class="row">
+    <div class="col-sm-12">
+        <img src="" alt="" class="img-responsive">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <!-- <h1>Recipe Name:</h1> -->
+        <img src="{{recipeDisplayed.imagePath}}" alt="{{recipeDisplayed.name}}" style="max-width:300px;">
+        <h1>{{recipeDisplayed.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="btn-group ">
+            <button type="button" class="btn btn-primary dropdown-toggle"
+            (click)="istoggle=!istoggle">
+                Manage Recipe<span class="caret"></span>
+
+            </button>
+            <ul class="dropdown-menu" [class.show]="istoggle">
+                <li><a style="cursor:pointer;" (click)="addToShopping()">To Shopping List</a></li>
+                <li><a style="cursor: pointer;">Edit Recipe</a></li>
+                <li><a style="cursor: pointer;">Delete Recipe</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <!-- <h3>Description:</h3> -->
+        <h3>{{recipeDisplayed.description}}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-9">
+        <h3>Ingredients:</h3>
+       
+            <ul class="list-group"
+            *ngFor="let ingredients of recipeDisplayed.Ingredients">
+                <li class="list-group-item">{{ingredients.name}}-
+                    {{ingredients.amount}} </li>
+            </ul>
+        
+    </div>
+</div>
